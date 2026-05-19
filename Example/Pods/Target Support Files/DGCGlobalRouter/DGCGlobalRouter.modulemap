@@ -1,0 +1,6 @@
+framework module DGCDGCGlobalRouter {
+  umbrella header "DGCDGCGlobalRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}

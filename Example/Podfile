@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'DGCGlobalRouter_Example' do
+  pod 'DGCGlobalRouter', :path => '../'
+
+  target 'DGCGlobalRouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

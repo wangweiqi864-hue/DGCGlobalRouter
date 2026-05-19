@@ -1,0 +1,16 @@
+PODS:
+  - DGCGlobalRouter (0.1.0)
+
+DEPENDENCIES:
+  - DGCGlobalRouter (from `../`)
+
+EXTERNAL SOURCES:
+  DGCGlobalRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DGCGlobalRouter: 7fca7f66c09c435e463551f33a479bba6499ad4e
+
+PODFILE CHECKSUM: e4d87418936c905c374198ba7618cea502e3096d
+
+COCOAPODS: 1.12.0
