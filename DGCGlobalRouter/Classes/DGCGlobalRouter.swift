@@ -21,9 +21,9 @@ open class DGCGlobalRouter {
         let dgc_appRouter = self.init()
         dgc_appRouter.dgc_params = dgc_params
         dgc_appRouter.dgc_extParam = dgc_extParam
-        dgc_appRouter.dgc_url = dgc_url
+        dgc_appRouter.dgc_url = url
         dgc_appRouter.navVc = navVc
-        RouterLog("打开---dgc_url---\(dgc_url)--dgc_params=\(dgc_params ?? [:])")
+        RouterLog("打开---dgc_url---\(url)--dgc_params=\(dgc_params ?? [:])")
         return dgc_appRouter.dgc_open()
     }
   
@@ -32,7 +32,7 @@ open class DGCGlobalRouter {
         let dgc_appRouter = self.init()
         dgc_appRouter.dgc_params = dgc_params
         dgc_appRouter.dgc_extParam = dgc_extParam
-        dgc_appRouter.dgc_url = dgc_url
+        dgc_appRouter.dgc_url = url
         dgc_appRouter.navVc = navVc
         
         let dgc_flag = dgc_appRouter.dgc_parser()
@@ -73,7 +73,7 @@ open class DGCGlobalRouter {
 
 extension DGCGlobalRouter {
     private func dgc_parser() -> Bool {
-        if let dgc_routerModel = DGCGlobalRouterHandler.dgc_parser(url: dgc_url){
+        if let dgc_routerModel = DGCGlobalRouterHandler.parser(url: dgc_url){
             RouterLog("dgc_parser---解析success--\(dgc_routerModel.path)")
             self.dgc_routerModel = dgc_routerModel
             return true
@@ -96,7 +96,7 @@ extension DGCGlobalRouter {
             RouterLog("dgc_startJump---跳转fail--路由对象不存在")
             return false
         }
-        dgc_routerModel.dgc_extParam = dgc_extParam
+        dgc_routerModel.extParam = dgc_extParam
         
         if dgc_routerModel.type == .open {
             if dgc_routerModel.pageType == .h5 {

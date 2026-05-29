@@ -56,7 +56,7 @@ class DGCGlobalRouterHandler {
             // 获取所有的参数
             let dgc_params = parserParams(url: dgc_url)
             // 获取pageType
-            let dgc_pageType: DGCOpenDynamicPageType = DGCGlobalRouterModel.handerDynamicPageType(dgc_params: dgc_params)
+            let dgc_pageType: DGCOpenDynamicPageType = DGCGlobalRouterModel.handerDynamicPageType(params: dgc_params)
             
             // 4.获取path和pathParams
             var dgc_pathParams: [String: String] = [:]
